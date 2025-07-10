@@ -6,50 +6,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body {
-      background-color: #0f172a;
-      color: #f8fafc;
-      font-family: Tahoma, Arial, sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      padding: 20px;
-    }
-    h1 {
-      color: #38bdf8;
-      margin-bottom: 20px;
+      background-color: #111;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 30px;
     }
     .info {
-      background: #1e293b;
-      border-radius: 12px;
+      background-color: #222;
+      border-radius: 10px;
       padding: 20px;
-      margin-top: 10px;
-      width: 90%;
-      max-width: 400px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      margin-top: 20px;
+      display: inline-block;
+      text-align: left;
     }
-    .info div {
-      margin: 10px 0;
-      font-size: 1.1em;
+    h1 {
+      color: #00d9ff;
     }
   </style>
 </head>
 <body>
-  <h1>تفاصيل جهازك</h1>
+  <h1>📡 تم جمع معلومات جهازك</h1>
   <div class="info">
-    <div id="ip">IP: ...</div>
-    <div id="location">الموقع: ...</div>
-    <div id="device">الجهاز: ...</div>
-    <div id="browser">المتصفح: ...</div>
+    <p id="ip">IP: ...</p>
+    <p id="location">الموقع: ...</p>
+    <p id="device">الجهاز: ...</p>
+    <p id="browser">المتصفح: ...</p>
   </div>
 
   <script>
-    // عرض معلومات الجهاز والمتصفح
+    // جهاز ومتصفح
     document.getElementById("device").innerText = "الجهاز: " + navigator.platform;
     document.getElementById("browser").innerText = "المتصفح: " + navigator.userAgent;
 
-    // جلب IP والموقع باستخدام ipapi
+    // IP والموقع
     fetch("https://ipapi.co/json")
       .then(res => res.json())
       .then(data => {
@@ -63,4 +53,4 @@
   </script>
 </body>
 </html>
-<h1>موقعي يعمل الآن ✅</h1>
+
